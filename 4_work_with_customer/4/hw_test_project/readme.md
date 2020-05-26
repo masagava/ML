@@ -49,3 +49,11 @@
 Полученная оценка качества построенной модели представлена в jupyter notebook'e в папке *notebooks*. 
 
 Распределение признаковых переменных в сравнении с нормальным распределением представлено в data_distribution.png в папке *reports*
+
+Параметры обученной модели, сохраненные в pickle-blob, представлены в папке *models*. Загрузка модели осуществляется следующим образом:
+```python
+import pickle
+
+with open('..\models\wine_quality_random_forest_model.pickle', 'rb') as input_fp:
+    model = pickle.load(input_fp)
+```
